@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>کارنامه — دموی زنده</title>
+    <meta name="description" content="دموی تعاملی سامانه مدیریت کارنامه — مدرسه علامه حلی ۱ تهران">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============================================================
+     DEMO BANNER
+     ============================================================ -->
+<div class="demo-banner">
+    <span class="demo-banner__dot"></span>
+    <span>این یک <strong>دموی نمایشی</strong> است — داده‌ها موقتی و در مرورگر شما ذخیره می‌شوند</span>
+</div>
+
+<!-- ============================================================
+     APP SHELL
+     ============================================================ -->
+<div class="app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="sidebar__brand">
+            <span class="sidebar__mark">ک</span>
+            <div class="sidebar__text">
+                <strong>کارنامه</strong>
+                <small>دموی تعاملی</small>
+            </div>
+        </div>
+
+        <nav class="sidebar__nav">
+            <a href="#" class="nav-item is-active" data-view="dashboard">
+                <span class="nav-icon">📊</span>
+                <span>داشبورد</span>
+            </a>
+            <a href="#" class="nav-item" data-view="students">
+                <span class="nav-icon">👥</span>
+                <span>دانش‌آموزان</span>
+            </a>
+            <a href="#" class="nav-item" data-view="courses">
+                <span class="nav-icon">📚</span>
+                <span>دروس</span>
+            </a>
+            <a href="#" class="nav-item" data-view="quizzes">
+                <span class="nav-icon">📝</span>
+                <span>کوییزها</span>
+            </a>
+            <a href="#" class="nav-item" data-view="predict">
+                <span class="nav-icon">🤖</span>
+                <span>پیش‌بینی AI</span>
+            </a>
+            <a href="#" class="nav-item" data-view="report">
+                <span class="nav-icon">📄</span>
+                <span>صدور کارنامه</span>
+            </a>
+        </nav>
+
+        <div class="sidebar__footer">
+            <a href="https://kartosheh.github.io" class="sidebar__back" target="_blank" rel="noopener">
+                <span>←</span>
+                <span>بازگشت به سایت اصلی</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+
+        <!-- ============ DASHBOARD ============ -->
+        <section class="view is-active" data-view="dashboard">
+            <header class="view__head">
+                <div>
+                    <h1 class="view__title">داشبورد</h1>
+                    <p class="view__sub">نمای کلی از سامانه</p>
+                </div>
+                <div class="view__meta">
+                    <span class="live-dot"></span>
+                    <span>داده‌های نمایشی</span>
+                </div>
+            </header>
+
+            <div class="stats">
+                <div class="stat-card" style="--c:#6366f1">
+                    <div class="stat-card__icon">👥</div>
+                    <div class="stat-card__num" data-count="52">0</div>
+                    <div class="stat-card__label">دانش‌آموز</div>
+                </div>
+                <div class="stat-card" style="--c:#8b5cf6">
+                    <div class="stat-card__icon">👨‍🏫</div>
+                    <div class="stat-card__num" data-count="12">0</div>
+                    <div class="stat-card__label">معلم</div>
+                </div>
+                <div class="stat-card" style="--c:#ec4899">
+                    <div class="stat-card__icon">🏫</div>
+                    <div class="stat-card__num" data-count="8">0</div>
+                    <div class="stat-card__label">کلاس</div>
+                </div>
+                <div class="stat-card" style="--c:#10b981">
+                    <div class="stat-card__icon">📝</div>
+                    <div class="stat-card__num" data-count="24">0</div>
+                    <div class="stat-card__label">کوییز</div>
+                </div>
+            </div>
+
+            <div class="panel">
+                <div class="panel__head">
+                    <h3>فعالیت‌های اخیر</h3>
+                </div>
+                <ul class="activity">
+                    <li>
+                        <span class="activity__dot" style="background:#6366f1"></span>
+                        <span>کوییز ریاضی — پایه هفتم ثبت شد</span>
+                        <time>۳ دقیقه پیش</time>
+                    </li>
+                    <li>
+                        <span class="activity__dot" style="background:#10b981"></span>
+                        <span>نمرات ۲۳ دانش‌آموز وارد شد</span>
+                        <time>۱۵ دقیقه پیش</time>
+                    </li>
+                    <li>
+                        <span class="activity__dot" style="background:#f59e0b"></span>
+                        <span>هشدار افت نمرات — علی محمدی</span>
+                        <time>۱ ساعت پیش</time>
+                    </li>
+                    <li>
+                        <span class="activity__dot" style="background:#ec4899"></span>
+                        <span>پیش‌بینی نمره نهایی تولید شد</span>
+                        <time>۲ ساعت پیش</time>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ============ STUDENTS ============ -->
+        <section class="view" data-view="students">
+            <header class="view__head">
+                <div>
+                    <h1 class="view__title">دانش‌آموزان</h1>
+                    <p class="view__sub">مدیریت لیست دانش‌آموزان</p>
+                </div>
+                <button class="btn btn--primary" id="add-student-btn">
+                    <span>+</span>
+                    <span>دانش‌آموز جدید</span>
+                </button>
+            </header>
+
+            <div class="toolbar">
+                <input type="text" class="input" id="search-students" placeholder="جستجو بر اساس نام یا فامیل...">
+            </div>
+
+            <div class="panel panel--table">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>نام</th>
+                            <th>نام خانوادگی</th>
+                            <th>کلاس</th>
+                            <th style="width:120px">عملیات</th>
+                        </tr>
+                    </thead>
+                    <tbody id="students-tbody"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- ============ COURSES ============ -->
+        <section class="view" data-view="courses">
+            <header class="view__head">
+                <div>
+                    <h1 class="view__title">دروس</h1>
+                    <p class="view__sub">لیست دروس تعریف‌شده</p>
+                </div>
+            </header>
+
+            <div class="courses-grid" id="courses-grid"></div>
+        </section>
+
+        <!-- ============ QUIZZES ============ -->
+        <section class="view" data-view="quizzes">
+            <header class="view__head">
+                <div>
+                    <h1 class="view__title">کوییزها</h1>
+                    <p class="view__sub">مدیریت کوییزها و ثبت نمرات</p>
+                </div>
+            </header>
+
+            <div class="panel panel--table">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>عنوان</th>
+                            <th>درس</th>
+                            <th>تاریخ</th>
+                            <th>نمره‌ی کامل</th>
+                            <th style="width:140px">عملیات</th>
+                        </tr>
+                    </thead>
+                    <tbody id="quizzes-tbody"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- ============ PREDICT ============ -->
+        <section class="view" data-view="predict">
+            <header class="view__head">
+                <div>
+                    <h1 class="view__title">پیش‌بینی نمره با AI</h1>
+                    <p class="view__sub">با استفاده از مدل رگرسیون خطی</p>
+                </div>
+            </header>
+
+            <div class="predict-grid">
+                <div class="panel">
+                    <div class="panel__head">
+                        <h3>انتخاب دانش‌آموز و درس</h3>
+                    </div>
+                    <div class="predict-form">
+                        <label>
+                            <span>کلاس</span>
+                            <select class="input" id="predict-class">
+                                <option value="">— انتخاب کلاس —</option>
+                                <option value="7a">پایه هفتم الف</option>
+                                <option value="7b">پایه هفتم ب</option>
+                                <option value="8a">پایه هشتم الف</option>
+                            </select>
+                        </label>
+
+                        <label>
+                            <span>دانش‌آموز</span>
+                            <select class="input" id="predict-student">
+                                <option value="">— انتخاب دانش‌آموز —</option>
+                            </select>
+                        </label>
+
+                        <label>
+                            <span>درس</span>
+                            <select class="input" id="predict-course">
+                                <option value="">— انتخاب درس —</option>
+                                <option value="math">ریاضی</option>
+                                <option value="physics">فیزیک</option>
+                                <option value="literature">ادبیات</option>
+                            </select>
+                        </label>
+
+                        <button class="btn btn--primary" id="predict-btn" disabled>
+                            🔮 پیش‌بینی نمره
+                        </button>
+                    </div>
+                </div>
+
+                <div class="panel" id="predict-result-panel">
+                    <div class="panel__head">
+                        <h3>نتیجه‌ی پیش‌بینی</h3>
+                    </div>
+                    <div class="predict-result" id="predict-result">
+                        <div class="predict-empty">
+                            <span class="predict-empty__icon">🤖</span>
+                            <p>پس از انتخاب دانش‌آموز، دکمه‌ی پیش‌بینی را بزنید</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ REPORT ============ -->
+        <section class="view" data-view="report">
+            <header class="view__head">
+                <div>
+                    <h1 class="view__title">صدور کارنامه</h1>
+                    <p class="view__sub">تولید کارنامه PDF</p>
+                </div>
+            </header>
+
+            <div class="panel">
+                <div class="panel__head">
+                    <h3>پیش‌نمایش کارنامه</h3>
+                </div>
+
+                <div class="report">
+                    <div class="report__toolbar">
+                        <select class="input" id="report-student">
+                            <option value="">— انتخاب دانش‌آموز —</option>
+                        </select>
+                        <button class="btn btn--primary" id="report-generate" disabled>
+                            📄 تولید کارنامه
+                        </button>
+                    </div>
+
+                    <div class="report__preview" id="report-preview">
+                        <div class="report-empty">
+                            <span>📄</span>
+                            <p>کارنامه‌ی تولیدشده اینجا نمایش داده می‌شود</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+</div>
+
+<!-- ============================================================
+     MODAL
+     ============================================================ -->
+<div class="modal" id="modal" aria-hidden="true">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__box">
+        <div class="modal__head">
+            <h3 id="modal-title">عنوان</h3>
+            <button class="modal__close" data-close>✕</button>
+        </div>
+        <div class="modal__body" id="modal-body"></div>
+    </div>
+</div>
+
+<script src="demo.js"></script>
+</body>
+</html>
